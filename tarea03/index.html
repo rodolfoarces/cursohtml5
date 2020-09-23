@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+		html,body {
+			height: 100%;
+		}
+		header {
+			display: block;
+			background: #286af0;
+			padding: 10px 0px;
+		}
+		section {
+			width: 79%;
+			background: #ccc;
+			float: left;
+			overflow: auto;
+			padding-bottom: 60px;
+			padding-top: 30px;
+		}
+		aside {
+			float: right;
+			border: 1px solid red;
+			width: 19%;
+			border: 1px solid red;
+		}
+		footer {
+			position: relative;
+			margin-top: 50px;
+			height: 40px;
+			padding: 5px 0px;
+			clear: both;
+			background: #286af0;
+			text-align: center;
+			color: #000;
+		}
+	</style>
+    <title>Tarea03 - Fomulario</title>
+</head>
+<body>
+<h1>Tarea03 - Formulario</h1>
+<form action="html5-formularios.html" method="POST">
+    <label form="nombre">Nombre: </label></br>
+    <input name="nombre" type="text" value="" size="60" placeholder="Ingrese su nombre"></br>
+    <label form="email">Correo electrónico: </label></br>
+    <input name="email" type="email" size="60"></br>
+    <label form="url">URL: </label></br>
+    <input name="url" type="url" size="60" placeholder="Escribe la URL de tu página web personal"></br>
+    <label form="fecha">Fecha: </label></br>
+    <input name="fecha" type="date"></br>
+    <label form="hora">Hora: </label></br>
+    <input name="hora" type="time" ></br>
+    <label form="Ciudad">Ciudad: </label></br>
+    <input name="ciudad" list="ciudad" size="60"></br>
+        <datalist id="ciudad">
+            <option value="1">Asunción</option>
+            <option value="2">San Lorenzo</option>
+            <option value="3">Ciudad del Este</option>
+        </datalist>
+    <label form="numero">Número: </label></br>
+    <input name="numero" type="number" min="-10" max="10"></br>
+    <label form="busqueda">Buscar:</label></br>
+    <input name="busqueda" type="search" ></br>
+    <label name="color">Color: </label></br>
+    <input name="color" type="color"></br>
+    <label name="archivo">Fichero: </label></br>
+    <input name="archivo" type="file" multiple></br>
+    <label name="mensaje">Mensaje: </label></br>
+    <textarea name="mensaje" type="textarea" rows="10" cols="50">Escriba aquí su mensaje...</textarea></br>
+    <input type="submit" value="Enviar">
+</form>
+</body>
+</html>

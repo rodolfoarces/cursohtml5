@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="estilo.css">
+	<title>Ejemplo</title>
+</head>
+<body>
+	<!-- Header/Cabecera -->
+	<header>
+		
+	<figure>
+		<img src="imagen.png" alt="Imagen demostrativa" with="50">
+		<figcaption>Esta es una imagen</figcaption>
+	</figure>
+	
+	</header>
+	<!-- Navegacion de paginas -->
+	<nav>
+		<a href="#inicio">Inicio</a>
+		<a href="pagina1.html">Página 1</a>
+		<a href="pagina2.html">Página 2</a>
+	</nav>
+	<section>
+		<video width="640" height="360" controls autoplay preload>
+			<source src="video.mp4" type="video/mp4" />
+			<source src="video.ogv" type="video/ogg" />
+			
+		</video> <br>
+		<canvas id="canvas" width="640" height="200">
+			El navegador no es compatible con esta funcionaldid HTML5			
+		</canvas>
+		<script type="text/javascript">
+		var cvs, ctx, posx = 0 , img;
+		var angle_now = 0, angle_past;
+		
+		function animacion() {
+			img = new Image();
+			angles=[0,45,90]
+			var azar = angles[Math.floor(Math.random()*angles.length)];
+			img_win_angle = 'img/tux-' + String(azar) + '.png';
+			img.src = img_win_angle;
+			ctx.clearRect(0,0,640,200);
+			ctx.drawImage(img, posx, 0);
+			posx += 5;
+			setTimeout(animacion, 50);
+			
+		};
+		window.onload = function() {
+			cnv = document.getElementById("canvas");
+			ctx = cnv.getContext("2d");
+			animacion();
+		};
+		</script>
+
+	</section>
+
+	<aside>
+		<audio controls autoplay preload>
+			<source src="audio.mp3" type="audio/mp3" />
+			<source src="audio.ogg" type="audio/ogg" />
+			<source src="audio.wav" type="audio/wav" />
+			Este navegador no soporta esta característica.
+		</audio>
+
+	</aside>
+
+	<footer>
+
+	</footer>
+
+</body>
+
+</html>
